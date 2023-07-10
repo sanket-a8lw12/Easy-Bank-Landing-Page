@@ -6,6 +6,7 @@ body{
     margin: 0;
     flex-direction: column;
     flex-grow: 1;
+    font-family: 'Public Sans', sans-serif;
 }
 
 .attribution {
@@ -47,13 +48,16 @@ body{
     align-items: center;
 }
 
+.menuButton{
+  display: none;
+}
+
+
  .nextGenDigitalBanking{
   display: flex;
     justify-content: space-between;
     background-color: #EEEEEE;
-    background-image: url("images/bg-intro-desktop.svg");
-    background-repeat: no-repeat;
-    background-position: right -28em top -16em;
+    
   }
 
   .nextGenDigitalBankingText{
@@ -61,19 +65,24 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 40%;
+    width: 50%;
     padding-left: 65px
 
   }
 
   .nextGenDigitalBankingImg{
-    width: 40rem;
+    /* width: 40rem; */
       /* margin-top: -0.5rem; */
-      margin-bottom: -10rem;
+      /* margin-bottom: -10rem; */
       overflow-x: hidden;
+      background-image: url("images/bg-intro-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: right -28em top -16em; */
   }
 
   .nextGenDigitalBankingImgMockUp{
+    
     object-position: 0rem -115px;
 
   }
@@ -87,6 +96,20 @@ body{
   .latestArticle{
     flex-grow: 10;
   }
+
+  .card-text p{
+    color: grey;
+  }
+
+  .card-text b{
+    color: black;
+  }
+
+  .card-text{
+    color: grey;
+  }
+
+
 
   
 
@@ -165,6 +188,10 @@ body{
     
   }
 
+  .footerCopyRight{
+    color: white;
+  }
+
   .footerSocialMediaLogo{
     flex-grow: 1;
     /* border: 2px solid black; */
@@ -173,12 +200,12 @@ body{
 
   .footer{
     flex-grow: 8;
-    background-color: #2f3d2f;
-    background-color: rgb(45, 49, 77);
+    /* background-color: #2f3d2f; */
+    /* background-color: rgb(45, 49, 77); */
     
      background-color: hsl(233, 26%, 24%);
     display: flex;
-    height: 110px;
+    /* height: 110px; */
   }
 
 
@@ -216,6 +243,8 @@ body{
     flex-grow: 1;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    gap: 10px;
   }
   
 
@@ -233,7 +262,12 @@ body{
   .whyChooseEasyBankText{
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     
+  }
+
+  .whyChooseEasyBankText card{
+    /* padding-top: 30px; */
   }
 
   .whyChooseEasyBankFooter{
@@ -247,3 +281,91 @@ body{
     text-decoration: none;
     color: white;
   }
+
+
+  @media (max-width: 480px){
+    body{
+      text-align: center;
+    }
+
+    .menu{
+      display: none;
+    }
+
+    .requestInviteButton{
+      display: none;
+    }
+
+    .menuButton{
+      display: block;
+      display: flex;
+      flex-grow: 1;
+      justify-content: center;
+    align-items: center;
+    }
+
+    .nextGenDigitalBanking{
+      display: flex;
+      flex-direction: column;
+      /* border: 2px solid red; */
+    }
+    .nextGenDigitalBankingText{
+      order: 1;
+    }
+
+    .nextGenDigitalBanking img{
+      /* order: -1; */
+      width: 100%;
+      /* border: 2px solid red; */
+    }
+
+    .nextGenDigitalBankingImgMockUp{
+      /* border: 2px solid red; */
+      scale: 0.6;
+      width:80vw;
+      object-position: 0rem -175px;
+      padding: 0;
+    
+    }
+
+    .whyChooseEasyBank{
+      padding-left: -10px;
+      margin-left: 0px;
+      display: flex;
+      justify-content: center;
+    }
+    .whyChooseEasyBankText{
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+    .card{
+      /* height: 300px; */
+      /* border: 2px solid yellow; */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 70px;
+    }
+
+    .latestArticleImages{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .footer{
+      display: flex;
+      flex-direction: column;
+      background-color: hsl(233, 26%, 24%);
+    }
+
+    .footerColMenu a{
+      color: white;
+    }
+
+
+  } 
